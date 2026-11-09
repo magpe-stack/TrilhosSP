@@ -6,6 +6,12 @@
 - **Repositório:** https://github.com/magpe-stack/TrilhosSP
 - **Manual (este arquivo):** https://github.com/magpe-stack/TrilhosSP/blob/main/README.md
 
+<p align="center">
+  <img src="SPTrilhosCover.png" alt="SP Trilhos - Guia do Metrô e Trem de São Paulo" width="100%">
+  <br>
+  <em>SP Trilhos — Ilustração em aquarela da malha metroferroviária e marcos icônicos de São Paulo.</em>
+</p>
+
 ## Sumário
 
 1. [Visão geral](#1-visão-geral)
