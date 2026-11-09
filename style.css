@@ -352,3 +352,5 @@ dialog::backdrop { background: rgba(5, 10, 25, .6); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
 }
+
+.btn-logo-app img { border-radius: 7px; }
