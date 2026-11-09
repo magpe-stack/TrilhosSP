@@ -1,0 +1,289 @@
+{
+  "linhas": [
+    {
+      "id": "L1",
+      "nome": "Linha 1 - Azul",
+      "concessionaria": "Metrô SP",
+      "estacoes": [
+        {"id": "JAB", "nome": "Jabaquara", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "CON", "nome": "Conceição", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "JUD", "nome": "Jabaquara / São Judas", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "SAU", "nome": "Saúde", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "PRA", "nome": "Praça da Árvore", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "SCZ", "nome": "Santa Cruz", "terminal_onibus": false, "baldeacoes": ["L5"]},
+        {"id": "VMD", "nome": "Vila Mariana", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "ANR", "nome": "Ana Rosa", "terminal_onibus": true, "baldeacoes": ["L2"]},
+        {"id": "PSO", "nome": "Paraíso", "terminal_onibus": false, "baldeacoes": ["L2"]},
+        {"id": "VER", "nome": "Vergueiro", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "JAP", "nome": "Japão-Liberdade", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "SAD", "nome": "Sé", "terminal_onibus": false, "baldeacoes": ["L3"]},
+        {"id": "SBO", "nome": "São Bento", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "LUZ", "nome": "Luz", "terminal_onibus": false, "baldeacoes": ["L4", "L7", "L11"]},
+        {"id": "TRD", "nome": "Tiradentes", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "ARM", "nome": "Armênia", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "TIE", "nome": "Portuguesa-Tietê", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "CAN", "nome": "Carandiru", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "SAN", "nome": "Santana", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "JDF", "nome": "Jardim São Paulo-Ayrton Senna", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "PAR", "nome": "Parada Inglesa", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "TUC", "nome": "Tucuruvi", "terminal_onibus": true, "baldeacoes": []}
+      ]
+    },
+    {
+      "id": "L2",
+      "nome": "Linha 2 - Verde",
+      "concessionaria": "Metrô SP",
+      "estacoes": [
+        {"id": "VMD_L2", "nome": "Vila Madalena", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "SUM", "nome": "Sumaré", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "CLIN", "nome": "Clínicas", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "CONS", "nome": "Consolação", "terminal_onibus": false, "baldeacoes": ["L4"]},
+        {"id": "TRI", "nome": "Trianon-Masp", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BGG", "nome": "Brigadeiro", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "PSO_L2", "nome": "Paraíso", "terminal_onibus": false, "baldeacoes": ["L1"]},
+        {"id": "ANR_L2", "nome": "Ana Rosa", "terminal_onibus": true, "baldeacoes": ["L1"]},
+        {"id": "IPIR", "nome": "Chácara Klabin", "terminal_onibus": false, "baldeacoes": ["L5"]},
+        {"id": "IMG", "nome": "Santos-Imigrantes", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "AIP", "nome": "Alto do Ipiranga", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "SAC", "nome": "Sacomã", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "TAM", "nome": "Tamanduateí", "terminal_onibus": false, "baldeacoes": ["L10"]},
+        {"id": "VPR", "nome": "Vila Prudente", "terminal_onibus": true, "baldeacoes": ["L15"]}
+      ]
+    },
+    {
+      "id": "L3",
+      "nome": "Linha 3 - Vermelha",
+      "concessionaria": "Metrô SP",
+      "estacoes": [
+        {"id": "BFU", "nome": "Palmeiras-Barra Funda", "terminal_onibus": true, "baldeacoes": ["L7", "L8"]},
+        {"id": "MEC", "nome": "Marechal Deodoro", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "STA", "nome": "Santa Cecília", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "REP", "nome": "República", "terminal_onibus": false, "baldeacoes": ["L4"]},
+        {"id": "ANB", "nome": "Anhangabaú", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "SAD_L3", "nome": "Sé", "terminal_onibus": false, "baldeacoes": ["L1"]},
+        {"id": "PDS", "nome": "Pedro II", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "BAS", "nome": "Brás", "terminal_onibus": false, "baldeacoes": ["L7", "L10", "L11", "L12"]},
+        {"id": "BMT", "nome": "Bresser-Mooca", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BEL", "nome": "Belém", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "TAT", "nome": "Tatuapé", "terminal_onibus": true, "baldeacoes": ["L11", "L12"]},
+        {"id": "CAR", "nome": "Carrão-Assaí Atacadista", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "PEN", "nome": "Penha-Besni", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "VMA", "nome": "Vila Matilde", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "GUA", "nome": "Guilhermina-Esperança", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "PAT", "nome": "Patriarca-Vila Ré", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "ART", "nome": "Artur Alvim", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "ITQ", "nome": "Corinthians-Itaquera", "terminal_onibus": true, "baldeacoes": ["L11"]}
+      ]
+    },
+    {
+      "id": "L4",
+      "nome": "Linha 4 - Amarela",
+      "concessionaria": "ViaQuatro",
+      "estacoes": [
+        {"id": "LUZ_L4", "nome": "Luz", "terminal_onibus": false, "baldeacoes": ["L1", "L7", "L11"]},
+        {"id": "HIG", "nome": "Higienópolis-Mackenzie", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "REP_L4", "nome": "República", "terminal_onibus": false, "baldeacoes": ["L3"]},
+        {"id": "PTA", "nome": "Paulista", "terminal_onibus": false, "baldeacoes": ["L2"]},
+        {"id": "OCS", "nome": "Oscar Freire", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "FRD", "nome": "Fradique Coutinho", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "PIN", "nome": "Pinheiros", "terminal_onibus": true, "baldeacoes": ["L9"]},
+        {"id": "FAR", "nome": "Faria Lima", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BUT", "nome": "Butantã", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "SPO", "nome": "São Paulo-Morumbi", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "VSO", "nome": "Vila Sônia", "terminal_onibus": true, "baldeacoes": []}
+      ]
+    },
+    {
+      "id": "L5",
+      "nome": "Linha 5 - Lilás",
+      "concessionaria": "ViaMobilidade",
+      "estacoes": [
+        {"id": "CPR", "nome": "Capão Redondo", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "CLB", "nome": "Campo Limpo", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "GVT", "nome": "Vila Das Belezas", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "GGR", "nome": "Giovanni Gronchi", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "STO", "nome": "Santo Amaro", "terminal_onibus": true, "baldeacoes": ["L9"]},
+        {"id": "ALV", "nome": "Largo Treze", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "APN", "nome": "Adolfo Pinheiro", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BRR", "nome": "Alto da Boa Vista", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BOR", "nome": "Borba Gato", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BROOK", "nome": "Brooklin", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "CPO", "nome": "Campo Belo", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "EUC", "nome": "Eucaliptos", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "MOE", "nome": "Moema", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "AAC", "nome": "AACD-Servidor", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "HSP", "nome": "Hospital São Paulo", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "SCZ_L5", "nome": "Santa Cruz", "terminal_onibus": false, "baldeacoes": ["L1"]},
+        {"id": "CKL_L5", "nome": "Chácara Klabin", "terminal_onibus": false, "baldeacoes": ["L2"]}
+      ]
+    },
+    {
+      "id": "L7",
+      "nome": "Linha 7 - Rubi",
+      "concessionaria": "TIC Trens / CPTM",
+      "estacoes": [
+        {"id": "JUND", "nome": "Jundiaí", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "VRP", "nome": "Várzea Paulista", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "CMP", "nome": "Campo Limpo Paulista", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BOT", "nome": "Botujuru", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "FDR", "nome": "Francisco Morato", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "BTO", "nome": "Baltazar Fidélis", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "FCO", "nome": "Franco da Rocha", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "CIE", "nome": "Caieiras", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "PRU", "nome": "Perus", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "VCL", "nome": "Vila Clarice", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "JRG", "nome": "Jaraguá", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "VOT", "nome": "Vila Aurora", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "PIR", "nome": "Pirituba", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "PIC", "nome": "Piqueri", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "LAPA_7", "nome": "Lapa (Linha 7)", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "CPR_7", "nome": "Água Branca", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BFU_7", "nome": "Palmeiras-Barra Funda", "terminal_onibus": true, "baldeacoes": ["L3", "L8"]},
+        {"id": "LUZ_7", "nome": "Luz", "terminal_onibus": false, "baldeacoes": ["L1", "L4", "L11"]},
+        {"id": "BAS_7", "nome": "Brás", "terminal_onibus": false, "baldeacoes": ["L3", "L10", "L11", "L12"]}
+      ]
+    },
+    {
+      "id": "L8",
+      "nome": "Linha 8 - Diamante",
+      "concessionaria": "ViaMobilidade",
+      "estacoes": [
+        {"id": "JAP_8", "nome": "Júlio Prestes", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BFU_8", "nome": "Palmeiras-Barra Funda", "terminal_onibus": true, "baldeacoes": ["L3", "L7"]},
+        {"id": "LAPA_8", "nome": "Lapa (Linha 8)", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "IMP", "nome": "Imperatriz Leopoldina", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "ALT", "nome": "Domingos de Moraes", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "OSA", "nome": "Osasco", "terminal_onibus": true, "baldeacoes": ["L9"]},
+        {"id": "PAL", "nome": "Presidente Altino", "terminal_onibus": false, "baldeacoes": ["L9"]},
+        {"id": "KM18", "nome": "Comandante Sampaio", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "QAT", "nome": "Quitaúna", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "CGB", "nome": "General Miguel Costa", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "CARP", "nome": "Carapicuíba", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "SLT", "nome": "Santa Terezinha", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "APD", "nome": "Antonio João", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BRB", "nome": "Barueri", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "JBG", "nome": "Jardim Belval", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "JSI", "nome": "Jardim Silveira", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "JND", "nome": "Jandira", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "SAG", "nome": "Sagrado Coração", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "ENG", "nome": "Engenheiro Cardoso", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "ITP", "nome": "Itapevi", "terminal_onibus": true, "baldeacoes": []}
+      ]
+    },
+    {
+      "id": "L9",
+      "nome": "Linha 9 - Esmeralda",
+      "concessionaria": "ViaMobilidade",
+      "estacoes": [
+        {"id": "OSA_9", "nome": "Osasco", "terminal_onibus": true, "baldeacoes": ["L8"]},
+        {"id": "PAL_9", "nome": "Presidente Altino", "terminal_onibus": false, "baldeacoes": ["L8"]},
+        {"id": "CEAS", "nome": "Ceasa", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "JAG", "nome": "Vila Lobos-Jaguaré", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "UBO", "nome": "Cidade Universitária", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "PIN_9", "nome": "Pinheiros", "terminal_onibus": true, "baldeacoes": ["L4"]},
+        {"id": "HBR", "nome": "Hebraica-Rebouças", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "CID", "nome": "Cidade Jardim", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "VOL", "nome": "Vila Olímpia", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BER", "nome": "Berrini", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "MOR", "nome": "Morumbi", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "GRN", "nome": "Granja Julieta", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "STO_9", "nome": "Santo Amaro", "terminal_onibus": true, "baldeacoes": ["L5"]},
+        {"id": "SOC", "nome": "Socorro", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "JUR", "nome": "Jurubatuba", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "AUT", "nome": "Autódromo", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "INT", "nome": "Primavera-Interlagos", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "GRA", "nome": "Grajaú", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "MBM", "nome": "Mendes-Vila Natal", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "VGA", "nome": "Varginha", "terminal_onibus": true, "baldeacoes": []}
+      ]
+    },
+    {
+      "id": "L10",
+      "nome": "Linha 10 - Turquesa",
+      "concessionaria": "CPTM",
+      "estacoes": [
+        {"id": "BAS_10", "nome": "Brás", "terminal_onibus": false, "baldeacoes": ["L3", "L7", "L11", "L12"]},
+        {"id": "MOO", "nome": "Juventus-Mooca", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "IPG", "nome": "Ipiranga", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "TAM_10", "nome": "Tamanduateí", "terminal_onibus": false, "baldeacoes": ["L2"]},
+        {"id": "SCA", "nome": "São Caetano do Sul-Prefeito Walter Braido", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "UTG", "nome": "Utinga", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "CSF", "nome": "Prefeito Saladino", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "SAN_10", "nome": "Santo André", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "CLB_10", "nome": "Capuava", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "MAU", "nome": "Mauá", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "GUA_10", "nome": "Guapituba", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "RPI", "nome": "Ribeirão Pires-Vicente Scalise", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "RGS", "nome": "Rio Grande da Serra", "terminal_onibus": true, "baldeacoes": []}
+      ]
+    },
+    {
+      "id": "L11",
+      "nome": "Linha 11 - Coral",
+      "concessionaria": "CPTM",
+      "estacoes": [
+        {"id": "LUZ_11", "nome": "Luz", "terminal_onibus": false, "baldeacoes": ["L1", "L4", "L7"]},
+        {"id": "BAS_11", "nome": "Brás", "terminal_onibus": false, "baldeacoes": ["L3", "L7", "L10", "L12"]},
+        {"id": "TAT_11", "nome": "Tatuapé", "terminal_onibus": true, "baldeacoes": ["L3", "L12"]},
+        {"id": "ITQ_11", "nome": "Corinthians-Itaquera", "terminal_onibus": true, "baldeacoes": ["L3"]},
+        {"id": "DMO", "nome": "Dom Bosco", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "JBO", "nome": "José Bonifácio", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "GUA_11", "nome": "Guaianases", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "ACT", "nome": "Antonio Gianetti Neto", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "FVA", "nome": "Ferraz de Vasconcelos", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "POA", "nome": "Poá", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "CBA", "nome": "Calmon Viana", "terminal_onibus": false, "baldeacoes": ["L12"]},
+        {"id": "SUZ", "nome": "Suzano", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "JPP", "nome": "Jundiapeba", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "BKB", "nome": "Braz Cubas", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "MDC", "nome": "Mogi das Cruzes", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "EST", "nome": "Estudantes", "terminal_onibus": true, "baldeacoes": []}
+      ]
+    },
+    {
+      "id": "L12",
+      "nome": "Linha 12 - Safira",
+      "concessionaria": "CPTM",
+      "estacoes": [
+        {"id": "BAS_12", "nome": "Brás", "terminal_onibus": false, "baldeacoes": ["L3", "L7", "L10", "L11"]},
+        {"id": "TAT_12", "nome": "Tatuapé", "terminal_onibus": true, "baldeacoes": ["L3", "L11"]},
+        {"id": "Engenheiro Goulart", "nome": "Engenheiro Goulart", "terminal_onibus": false, "baldeacoes": ["L13"]},
+        {"id": "USP", "nome": "USP Leste", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "ERM", "nome": "Comendador Ermelino", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "SMI", "nome": "São Miguel Paulista", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "JBW", "nome": "Jardim Helena-Vila Mara", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "ITQ_12", "nome": "Itaquaquecetuba", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "ARAC", "nome": "Aracaré", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "CBA_12", "nome": "Calmon Viana", "terminal_onibus": false, "baldeacoes": ["L11"]}
+      ]
+    },
+    {
+      "id": "L13",
+      "nome": "Linha 13 - Jade",
+      "concessionaria": "CPTM",
+      "estacoes": [
+        {"id": "EGO_13", "nome": "Engenheiro Goulart", "terminal_onibus": false, "baldeacoes": ["L12"]},
+        {"id": "GCE", "nome": "Guarulhos-Cecap", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "GRU", "nome": "Aeroporto-Guarulhos", "terminal_onibus": true, "baldeacoes": []}
+      ]
+    },
+    {
+      "id": "L15",
+      "nome": "Linha 15 - Prata (Monotrilho)",
+      "concessionaria": "Metrô SP",
+      "estacoes": [
+        {"id": "VPR_15", "nome": "Vila Prudente", "terminal_onibus": true, "baldeacoes": ["L2"]},
+        {"id": "VPM", "nome": "Vila Oratório / Oratório", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "SVP", "nome": "São Lucas", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "CPL", "nome": "Camilo Haddad", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "VTL", "nome": "Vila Tolstói", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "VUN", "nome": "Vila União", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "JPL", "nome": "Jardim Planalto", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "SAP", "nome": "Sapopemba", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "FTE", "nome": "Fazenda da Juta", "terminal_onibus": false, "baldeacoes": []},
+        {"id": "MAT", "nome": "São Mateus", "terminal_onibus": true, "baldeacoes": []},
+        {"id": "CCT", "nome": "Jardim Colonial", "terminal_onibus": false, "baldeacoes": []}
+      ]
+    }
+  ]
+}

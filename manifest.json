@@ -1,0 +1,25 @@
+{
+  "name": "SP Trilhos - Guia do Metrô e Trem de São Paulo",
+  "short_name": "SP Trilhos",
+  "description": "Rotas offline de metrô e trem, mapa interativo e guia do passageiro de São Paulo.",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "id": "/TrilhosSP/",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#0b3d91",
+  "categories": ["travel", "navigation", "utilities"],
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Planejar rota", "url": "./index.html#rota", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] },
+    { "name": "Meus projetos", "url": "./index.html#projetos", "icons": [{ "src": "icon-192.png", "sizes": "192x192" }] }
+  ]
+}

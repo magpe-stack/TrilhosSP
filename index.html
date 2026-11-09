@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<!--
+  SP Trilhos - Guia do Metrô e Trem de São Paulo
+  Arquivo: index.html  |  Estrutura semântica e acessível (WCAG 2.2 AA)
+  App:        https://magpe-stack.github.io/TrilhosSP/
+  Repositório: https://github.com/magpe-stack/TrilhosSP
+  Ajuda:       https://github.com/magpe-stack/TrilhosSP/blob/main/README.md
+-->
+<html lang="pt-BR" data-tema="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>SP Trilhos - Guia do Metrô e Trem de São Paulo</title>
+  <meta name="description" content="Planeje rotas offline de metrô e trem em São Paulo, veja o mapa interativo da malha metroferroviária e consulte o guia do passageiro.">
+  <meta name="theme-color" content="#0b3d91">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="stylesheet" href="style.css">
+  <!-- Tema: Light-First. Só usa o escuro se o usuário tiver escolhido isso manualmente. -->
+  <script>
+    (function () {
+      var t = 'light';
+      try { if (localStorage.getItem('sptrilhos:tema') === 'dark') t = 'dark'; } catch (e) {}
+      document.documentElement.setAttribute('data-tema', t);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+  <!-- ===== SPLASH CINEMATOGRÁFICA (3 s) ===== -->
+  <div id="splash" aria-hidden="true">
+    <div class="splash-tunel"></div>
+    <div class="splash-trilhos"><i></i><i></i><i></i></div>
+    <div class="splash-farol"></div>
+    <div class="splash-centro">
+      <img src="icon-192.png" alt="" width="96" height="96" class="splash-logo">
+      <h1 class="splash-titulo">SP&nbsp;Trilhos</h1>
+      <p class="splash-sub">Guia do Metrô e Trem de São Paulo</p>
+    </div>
+    <div class="splash-barra"><span></span></div>
+  </div>
+
+  <div id="app" hidden>
+    <!-- ===== CABEÇALHO ===== -->
+    <header class="topbar" role="banner">
+      <button type="button" id="btn-logo" class="logo-btn" aria-label="SP Trilhos - voltar à página inicial">
+        <img src="icon-192.png" alt="" width="36" height="36">
+        <span class="logo-texto">SP Trilhos</span>
+      </button>
+      <div class="topbar-acoes">
+        <button type="button" id="btn-tela-cheia-top" class="icone-btn" data-acao="tela-cheia" aria-label="Alternar tela cheia" data-icone="fullscreen"></button>
+        <button type="button" id="btn-menu" class="icone-btn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu" data-icone="menu"></button>
+      </div>
+    </header>
+
+    <!-- ===== MENU LATERAL (HAMBÚRGUER) ===== -->
+    <div id="menu-fundo" class="menu-fundo" hidden></div>
+    <nav id="menu" class="menu" aria-label="Menu principal" aria-hidden="true" inert>
+      <div class="menu-topo">
+        <strong>Menu</strong>
+        <button type="button" id="btn-menu-fechar" class="icone-btn" aria-label="Fechar menu" data-icone="close"></button>
+      </div>
+      <ul class="menu-lista">
+        <li><button type="button" data-ir="rota"><span data-icone="home"></span>Início - Planejar rota</button></li>
+        <li><button type="button" data-ir="mapa"><span data-icone="map"></span>Mapa da malha</button></li>
+        <li><button type="button" data-ir="guia"><span data-icone="book"></span>Guia do Passageiro</button></li>
+        <li class="menu-sep" role="separator"></li>
+        <li><button type="button" data-acao="novo-projeto"><span data-icone="plus"></span>Novo Projeto</button></li>
+        <li><button type="button" data-ir="projetos"><span data-icone="folder"></span>Meus Projetos</button></li>
+        <li><button type="button" data-acao="salvar-projeto"><span data-icone="save"></span>Salvar projeto atual</button></li>
+        <li><button type="button" data-acao="exportar"><span data-icone="download"></span>Exportar projeto</button></li>
+        <li><button type="button" data-acao="importar"><span data-icone="upload"></span>Importar projeto / backup</button></li>
+        <li><button type="button" data-acao="imprimir"><span data-icone="printer"></span>Imprimir projeto</button></li>
+        <li><button type="button" data-acao="compartilhar"><span data-icone="share"></span>Compartilhar</button></li>
+        <li><button type="button" data-acao="backup"><span data-icone="archive"></span>Backup completo</button></li>
+        <li class="menu-sep" role="separator"></li>
+        <li><button type="button" data-acao="tema" id="btn-tema" role="switch" aria-checked="false"><span data-icone="moon"></span><span id="btn-tema-txt">Modo escuro</span></button></li>
+        <li><button type="button" data-acao="tela-cheia"><span data-icone="fullscreen"></span><span class="txt-tela-cheia">Tela cheia</span></button></li>
+        <li><button type="button" data-acao="instalar" id="btn-instalar"><span data-icone="install"></span>Instalar PWA</button></li>
+        <li class="menu-sep" role="separator"></li>
+        <li><button type="button" data-acao="sobre"><span data-icone="info"></span>Sobre</button></li>
+        <li><a href="https://github.com/magpe-stack/TrilhosSP/blob/main/README.md" target="_blank" rel="noopener noreferrer"><span data-icone="help"></span>Ajuda (Manual / README)</a></li>
+        <li><a href="https://github.com/magpe-stack/TrilhosSP" target="_blank" rel="noopener noreferrer"><span data-icone="github"></span>GitHub (código-fonte)</a></li>
+      </ul>
+    </nav>
+
+    <!-- ===== CONTEÚDO ===== -->
+    <main id="conteudo" tabindex="-1">
+
+      <!-- VISÃO 1: ROTA + MAPA (split-view no desktop) -->
+      <section id="view-rota" class="view" aria-labelledby="t-rota">
+        <div class="split">
+          <div class="painel painel-esq" id="painel-form">
+            <h2 id="t-rota" class="titulo-vista">Planejar rota <span class="selo">offline</span></h2>
+            <p id="projeto-ativo-info" class="projeto-info" aria-live="polite"></p>
+
+            <form id="form-rota" novalidate autocomplete="off">
+              <div class="campo">
+                <label for="in-origem">Origem</label>
+                <input id="in-origem" name="origem" list="lista-estacoes" type="text" inputmode="search" placeholder="Digite a estação de partida" required aria-describedby="erro-rota">
+              </div>
+              <div class="troca-linha">
+                <button type="button" id="btn-trocar" class="icone-btn pequeno" aria-label="Inverter origem e destino" data-icone="swap"></button>
+              </div>
+              <div class="campo">
+                <label for="in-destino">Destino</label>
+                <input id="in-destino" name="destino" list="lista-estacoes" type="text" inputmode="search" placeholder="Digite a estação de chegada" required aria-describedby="erro-rota">
+              </div>
+              <datalist id="lista-estacoes"></datalist>
+
+              <fieldset class="opcoes">
+                <legend>Preferência de trajeto</legend>
+                <label class="radio"><input type="radio" name="criterio" value="rapida" checked> <span>Mais rápida</span></label>
+                <label class="radio"><input type="radio" name="criterio" value="baldeacoes"> <span>Menos baldeações</span></label>
+              </fieldset>
+              <label class="check"><input type="checkbox" id="chk-terminais"> <span>Sugerir apenas estações com terminal de ônibus</span></label>
+
+              <p id="erro-rota" class="erro" role="alert"></p>
+              <div class="form-acoes">
+                <button type="submit" class="btn primario grande">Calcular rota</button>
+                <button type="button" id="btn-limpar" class="btn">Limpar</button>
+              </div>
+            </form>
+
+            <div id="resultado" class="resultado" aria-live="polite" tabindex="-1"></div>
+          </div>
+
+          <div class="painel painel-dir" id="painel-mapa">
+            <div class="mapa-cab">
+              <h2 id="t-mapa" class="titulo-vista">Mapa da malha</h2>
+              <div class="mapa-ctrl" role="group" aria-label="Controles do mapa">
+                <button type="button" class="icone-btn" id="mz-menos" aria-label="Diminuir zoom" data-icone="minus"></button>
+                <button type="button" class="icone-btn" id="mz-mais" aria-label="Aumentar zoom" data-icone="plus"></button>
+                <button type="button" class="icone-btn" id="mz-reset" aria-label="Reiniciar visão do mapa" data-icone="reset"></button>
+              </div>
+            </div>
+            <div class="chips-linhas" id="chips-linhas" role="group" aria-label="Destacar linha no mapa"></div>
+            <div id="mapa-caixa" class="mapa-caixa" tabindex="0" aria-describedby="mapa-ajuda">
+              <p class="mapa-carregando" id="mapa-carregando">Carregando mapa…</p>
+            </div>
+            <p id="mapa-ajuda" class="dica">Arraste para mover, use os botões, a roda do mouse ou dois dedos para o zoom. Teclado: setas movem, + e − dão zoom, 0 reinicia.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- VISÃO 2: GUIA DO PASSAGEIRO -->
+      <section id="view-guia" class="view" aria-labelledby="t-guia" hidden>
+        <h2 id="t-guia" class="titulo-vista">Guia do Passageiro</h2>
+        <div class="campo busca">
+          <label for="busca-guia">Buscar no guia</label>
+          <input id="busca-guia" type="search" placeholder="Ex.: bicicleta, pet, achados, bilhete…">
+        </div>
+        <div class="abas" role="tablist" aria-label="Categorias do guia">
+          <button role="tab" id="tab-metro" aria-controls="pnl-guia" aria-selected="true" data-aba="metro">Metrô</button>
+          <button role="tab" id="tab-trens" aria-controls="pnl-guia" aria-selected="false" data-aba="trens" tabindex="-1">Trens</button>
+          <button role="tab" id="tab-onibus" aria-controls="pnl-guia" aria-selected="false" data-aba="onibus" tabindex="-1">Ônibus Metropolitanos</button>
+        </div>
+        <p id="guia-status" class="dica" aria-live="polite"></p>
+        <div id="pnl-guia" role="tabpanel" aria-labelledby="tab-metro" class="guia-painel"></div>
+      </section>
+
+      <!-- VISÃO 3: MEUS PROJETOS -->
+      <section id="view-projetos" class="view" aria-labelledby="t-proj" hidden>
+        <h2 id="t-proj" class="titulo-vista">Meus Projetos</h2>
+        <div class="barra-acoes">
+          <button type="button" class="btn primario" data-acao="novo-projeto"><span data-icone="plus"></span>Novo Projeto</button>
+          <button type="button" class="btn" data-acao="importar"><span data-icone="upload"></span>Importar</button>
+          <button type="button" class="btn" data-acao="backup"><span data-icone="archive"></span>Backup completo</button>
+        </div>
+        <p class="dica">Projetos ficam salvos somente neste aparelho (localStorage). Faça backup regularmente.</p>
+        <ul id="lista-projetos" class="lista-projetos"></ul>
+      </section>
+    </main>
+
+    <!-- ===== NAVEGAÇÃO INFERIOR (uma mão) ===== -->
+    <nav class="abas-baixo" aria-label="Navegação rápida">
+      <button type="button" data-ir="rota" data-tab="rota"><span data-icone="route"></span><span>Rota</span></button>
+      <button type="button" data-ir="mapa" data-tab="mapa" class="so-mobile"><span data-icone="map"></span><span>Mapa</span></button>
+      <button type="button" data-ir="guia" data-tab="guia"><span data-icone="book"></span><span>Guia</span></button>
+      <button type="button" data-ir="projetos" data-tab="projetos"><span data-icone="folder"></span><span>Projetos</span></button>
+    </nav>
+
+    <!-- ===== RODAPÉ PADRONIZADO ===== -->
+    <footer class="rodape" role="contentinfo">
+      <ul class="rodape-links">
+        <li><a href="https://magpe-stack.github.io/TrilhosSP/" target="_blank" rel="noopener noreferrer">Link do App</a></li>
+        <li><a href="https://github.com/magpe-stack/TrilhosSP" target="_blank" rel="noopener noreferrer">Link do Projeto (GitHub)</a></li>
+        <li><a href="https://github.com/magpe-stack/TrilhosSP/blob/main/README.md" target="_blank" rel="noopener noreferrer">Link do Manual (README)</a></li>
+      </ul>
+      <div class="rodape-botoes">
+        <a class="btn-gh" href="https://github.com/magpe-stack/TrilhosSP" target="_blank" rel="noopener noreferrer" aria-label="Abrir o repositório do SP Trilhos no GitHub">
+          <span data-icone="github"></span> GitHub
+        </a>
+        <a class="btn-gh" href="https://github.com/magpe-stack/TrilhosSP/blob/main/README.md" target="_blank" rel="noopener noreferrer" aria-label="Abrir a ajuda (README) no GitHub">
+          <span data-icone="help"></span> Ajuda
+        </a>
+      </div>
+      <p class="rodape-aviso">Projeto independente, sem vínculo oficial com Metrô, CPTM ou operadoras. Tempos são estimativas; confira os canais oficiais.</p>
+    </footer>
+  </div>
+
+  <!-- ===== DIÁLOGOS ===== -->
+  <dialog id="dlg-sobre" aria-labelledby="dlg-sobre-t">
+    <form method="dialog" class="dlg-corpo">
+      <h2 id="dlg-sobre-t">Sobre o SP Trilhos</h2>
+      <p><strong>Proposta.</strong> O SP Trilhos é um guia de bolso da malha metroferroviária da Grande São Paulo: calcula rotas e baldeações sem internet, mostra o mapa oficial em vetor, indica terminais de ônibus e reúne regras de uso (bicicletas, pets, bagagens, achados e perdidos e bilhetagem).</p>
+      <p><strong>Origem do nome.</strong> "SP" é de São Paulo; "Trilhos" é a palavra que une metrô, trem e monotrilho, tudo o que corre sobre trilhos. O nome é também um aceno ao sistema que costura a capital e os municípios vizinhos.</p>
+      <p><strong>Privacidade.</strong> Tudo funciona no seu aparelho. Projetos e preferências ficam no armazenamento local, nada é enviado a servidores.</p>
+      <p class="dica" id="sobre-versao"></p>
+      <p><a href="https://magpe-stack.github.io/TrilhosSP/" target="_blank" rel="noopener noreferrer">App</a> · <a href="https://github.com/magpe-stack/TrilhosSP" target="_blank" rel="noopener noreferrer">Projeto</a> · <a href="https://github.com/magpe-stack/TrilhosSP/blob/main/README.md" target="_blank" rel="noopener noreferrer">Manual</a></p>
+      <div class="dlg-acoes"><button class="btn primario" value="ok">Fechar</button></div>
+    </form>
+  </dialog>
+
+  <dialog id="dlg-projeto" aria-labelledby="dlg-projeto-t">
+    <form id="form-projeto" method="dialog" class="dlg-corpo">
+      <h2 id="dlg-projeto-t">Novo Projeto</h2>
+      <div class="campo">
+        <label for="proj-nome">Nome do projeto</label>
+        <input id="proj-nome" type="text" maxlength="80" required placeholder="Ex.: Casa → Trabalho">
+      </div>
+      <div class="campo">
+        <label for="proj-notas">Anotações (opcional)</label>
+        <textarea id="proj-notas" rows="4" maxlength="2000" placeholder="Horários, lembretes, pontos de encontro…"></textarea>
+      </div>
+      <div class="dlg-acoes">
+        <button type="button" class="btn" id="proj-cancelar">Cancelar</button>
+        <button type="submit" class="btn primario">Criar projeto</button>
+      </div>
+    </form>
+  </dialog>
+
+  <input type="file" id="arquivo-importar" accept=".json,application/json" hidden>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <div id="area-impressao" class="area-impressao" aria-hidden="true"></div>
+
+  <noscript><p style="padding:2rem">O SP Trilhos precisa de JavaScript para funcionar.</p></noscript>
+  <script src="app.js"></script>
+</body>
+</html>
